@@ -5,18 +5,14 @@ import HomeContent from '../components/HomeContent'
 
 export default function Home() {
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <ClientOnly>
         <Navigation />
-      </ClientOnly>
-      <main className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-        <ClientOnly>
+        <main className="flex-grow">
           <HomeContent />
-        </ClientOnly>
-      </main>
-      <ClientOnly>
+        </main>
         <Footer />
       </ClientOnly>
-    </>
+    </div>
   )
 }
